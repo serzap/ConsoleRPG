@@ -1,6 +1,7 @@
 #include "View/CConsole.hpp"
 #include "Controller/CController.hpp"
 
+#include "ncurses.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
@@ -12,6 +13,10 @@ int main()
     //CController controller;
 
 
-    std::cout << "SASHULYA" << std::endl;
+    initscr();			/* Start curses mode 		  */
+    printw("Hello SASHULYA");	/* Print Hello World		  */
+    refresh();			/* Print it on to the real screen */
+    getch();			/* Wait for user input */
+    endwin();			/* End curses mode		  */
     return 0;
 }

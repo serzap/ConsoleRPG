@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 2.8)
 
 project(TestRPG)
+
+find_package(Curses REQUIRED)
+include_directories(${CURSES_INCLUDE_DIR})
+
 set(SOURCE_FILES main.cpp
    View/CConsole.hpp View/CConsole.cpp
    Controller/CController.hpp Controller/CController.cpp
@@ -13,3 +17,5 @@ set(SOURCE_FILES main.cpp
    Controller/Item/CWeapon.hpp Controller/Item/CWeapon.cpp
    Controller/Ability/CAbility.hpp Controller/Ability/CAbility.cpp)
 add_executable(TestRPG ${SOURCE_FILES})
+
+target_link_libraries(TestRPG ncurses)
