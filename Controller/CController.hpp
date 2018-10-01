@@ -11,6 +11,9 @@ class CController
 public:
     CController();
 
+    void createHero(const std::string& name);
+    std::string getHeroName() const;
+
 private:
     CHero mHero;
     std::vector <CItem*> mItems;

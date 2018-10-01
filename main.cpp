@@ -9,14 +9,18 @@ using namespace std;
 
 int main()
 {
-    //CConsole console;
-    //CController controller;
+    CController controller;
+    CConsole console(controller);
 
+    /*
+    console.enterHeroName();
+    console.showHeroDescription();
+    */
 
-    initscr();			/* Start curses mode 		  */
-    printw("Hello SASHULYA");	/* Print Hello World		  */
-    refresh();			/* Print it on to the real screen */
-    getch();			/* Wait for user input */
-    endwin();			/* End curses mode		  */
+    initscr();
+    printw("Hello SASHULYA");
+    refresh();
+    getch();
+    endwin();
     return 0;
 }

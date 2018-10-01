@@ -10,6 +10,9 @@ class CHero
 {
 public:
     CHero();
+    void enterName(const std::string& name);
+
+    const CAttributes& getAttributtes() const;
 
 private:
     CAttributes mAttributes;
